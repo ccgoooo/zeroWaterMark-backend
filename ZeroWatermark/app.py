@@ -249,9 +249,23 @@ def get_rec_list():
         }
     }
 
+    # 计算总行数
     sql_count = "SELECT COUNT(*) FROM rec_history"
     cur.execute(sql_count)
     total_rows = cur.fetchone()[0]
+
+    # 计算列名为flag的列值为0的行数(即计算溯源成功的条数）
+    sql_zero_count = "SELECT COUNT(*) FROM rec_history WHERE flag = 0"
+    cur.execute(sql_zero_count)
+    zero_rows = cur.fetchone()[0]
+
+    # 计算比例
+    if total_rows > 0:
+        res_data['data']['acc'] = round(zero_rows / total_rows, 5) * 100
+        print("成功率",res_data['data']['acc'])
+    else:
+        res_data['data']['acc'] = 0
+
     # 若数据库数据不足，则只展示仅有的数据，否则最多展示20条
     if total_rows > 20:
         total = 20
@@ -281,9 +295,6 @@ def get_rec_list():
                 acc_num += 1
 
             res_data['data']['items'].append(info)
-        if total_rows != 0:
-            res_data['data']['acc'] = round(acc_num / total_rows, 2) * 100
-            print(res_data['data']['acc'])
 
     cur.close()
     db.close()
