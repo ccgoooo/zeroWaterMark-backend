@@ -1,0 +1,40 @@
+2024-08-13 23:41:09,513 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_logs
+2024-08-13 23:41:09,515 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_logs with status 200
+2024-08-13 23:41:09,760 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_logs
+2024-08-13 23:41:09,905 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_logs with status 200
+2024-08-13 23:41:34,337 - INFO - Request started for 127.0.0.1 to http://localhost:5000/user_manage/logout
+2024-08-13 23:41:34,337 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/user_manage/logout with status 200
+2024-08-13 23:41:34,590 - INFO - Request started for 127.0.0.1 to http://localhost:5000/user_manage/logout
+2024-08-13 23:41:34,593 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/user_manage/logout with status 200
+2024-08-13 23:41:37,028 - INFO - Request started for 127.0.0.1 to http://localhost:5000/user_manage/login
+2024-08-13 23:41:37,028 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/user_manage/login with status 200
+2024-08-13 23:41:37,342 - INFO - Request started for 127.0.0.1 to http://localhost:5000/user_manage/login
+2024-08-13 23:41:37,514 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/user_manage/login with status 200
+2024-08-13 23:41:37,605 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_logs
+2024-08-13 23:41:37,605 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_logs with status 200
+2024-08-13 23:41:37,857 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_logs
+2024-08-13 23:41:38,002 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_logs with status 200
+2024-08-13 23:41:50,079 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_rec_list
+2024-08-13 23:41:50,080 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_rec_list with status 200
+2024-08-13 23:41:50,397 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_rec_list
+2024-08-13 23:41:50,563 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_rec_list with status 200
+2024-08-13 23:41:53,536 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_logs
+2024-08-13 23:41:53,537 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_logs with status 200
+2024-08-13 23:41:53,852 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_logs
+2024-08-13 23:41:53,921 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_logs with status 200
+2024-08-13 23:42:01,057 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_gen_list
+2024-08-13 23:42:01,058 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_gen_list with status 200
+2024-08-13 23:42:01,378 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_gen_list
+2024-08-13 23:42:01,449 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_gen_list with status 200
+2024-08-13 23:42:04,294 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_rec_list
+2024-08-13 23:42:04,295 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_rec_list with status 200
+2024-08-13 23:42:04,561 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_rec_list
+2024-08-13 23:42:04,682 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_rec_list with status 200
+2024-08-13 23:42:06,857 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_cmp_info
+2024-08-13 23:42:06,857 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_cmp_info with status 200
+2024-08-13 23:42:07,174 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_cmp_info
+2024-08-13 23:42:07,367 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_cmp_info with status 200
+2024-08-13 23:42:10,575 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_logs
+2024-08-13 23:42:10,575 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_logs with status 200
+2024-08-13 23:42:10,884 - INFO - Request started for 127.0.0.1 to http://localhost:5000/get_logs
+2024-08-13 23:42:10,994 - INFO - Request completed for 127.0.0.1 to http://localhost:5000/get_logs with status 200
