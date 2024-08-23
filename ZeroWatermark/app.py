@@ -42,6 +42,11 @@ PASSWORD = "160336"
 # MySQL上创建的数据库名称
 DATABASE = "database_ZWM"
 
+# 本地存取水印文件的路径
+BASEPATH = r'F:\用户\Desktop\test'
+# 本地存取溯源文件的路径
+RECPATH = r'F:\用户\Desktop\test\re'
+
 # 请求前日志记录
 @app.before_request
 def log_request_on_before_request():
@@ -80,7 +85,7 @@ def gen_new_wm():  # 先从前端获取数据（文件），进行生成操作�
             for idx, file in enumerate(file_list):
                 if file:
                     # 将文件存储在本地路径上
-                    file_path = os.path.join(r'F:\用户\Desktop\test', file.filename)
+                    file_path = os.path.join(BASEPATH, file.filename)
                     filepath.append(file_path)
                     file.save(file_path)
 
@@ -183,7 +188,7 @@ def rec_new_wm():  # 从前端获取数据，进行相关操作，从数据库�
             for idx, file in enumerate(file_list):
                 if file:
                     # 将文件存储在本地路径上
-                    file_path = os.path.join(r'F:\用户\Desktop\test\re', file.filename)
+                    file_path = os.path.join(RECPATH, file.filename)
                     filepath.append(file_path)
                     file.save(file_path)
 
