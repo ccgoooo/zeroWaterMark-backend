@@ -127,14 +127,20 @@ def get_gen_list():
     sql_count = "SELECT COUNT(*) FROM information"
     cur.execute(sql_count)
     total_rows = cur.fetchone()[0]
-    # 若数据库数据不足，则只展示仅有的数据，否则最多展示20条
-    if total_rows > 20:
-        total_rows = 20
+    res_data['data']['total'] = total_rows
 
-    sql = "SELECT * FROM information ORDER BY id DESC LIMIT %s"
-    cur.execute(sql, (total_rows,))
-    # 获取所有查询结果
+    if request.method == 'POST':
+        # 用户角色、用户id、用户名字、用户ip、渠道（时间不需要匹配）
+        page = int(request.form.get('currentPage'))
+        print(page)
+    per_page = 20  # 每页展示20条记录
+    # 计算偏移量
+    offset = (page - 1) * per_page
+    # 编写SQL查询语句，使用LIMIT和OFFSET实现分页
+    sql = "SELECT * FROM information ORDER BY id LIMIT %s OFFSET %s"
+    cur.execute(sql, (per_page, offset))
     results = cur.fetchall()
+
     if results:
         for result in results:
             info = {}
@@ -249,10 +255,12 @@ def get_rec_list():
         }
     }
 
+
     # 计算总行数
     sql_count = "SELECT COUNT(*) FROM rec_history"
     cur.execute(sql_count)
     total_rows = cur.fetchone()[0]
+    res_data["data"]["total"] = total_rows
 
     # 计算列名为flag的列值为0的行数(即计算溯源成功的条数）
     sql_zero_count = "SELECT COUNT(*) FROM rec_history WHERE flag = 0"
@@ -266,16 +274,18 @@ def get_rec_list():
     else:
         res_data['data']['acc'] = 0
 
-    # 若数据库数据不足，则只展示仅有的数据，否则最多展示20条
-    if total_rows > 20:
-        total = 20
-    else:
-        total = total_rows
-
-    sql = "SELECT * FROM rec_history ORDER BY id DESC LIMIT %s"
-    cur.execute(sql, (total,))
-    # 获取所有查询结果
+    if request.method == 'POST':
+        # 用户角色、用户id、用户名字、用户ip、渠道（时间不需要匹配）
+        page = int(request.form.get('currentPage'))
+        print(page)
+    per_page = 20  # 每页展示20条记录
+    # 计算偏移量
+    offset = (page - 1) * per_page
+    # 编写SQL查询语句，使用LIMIT和OFFSET实现分页
+    sql = "SELECT * FROM rec_history ORDER BY id LIMIT %s OFFSET %s"
+    cur.execute(sql, (per_page, offset))
     results = cur.fetchall()
+
     if results:
         acc_num = 0
         for result in results:
