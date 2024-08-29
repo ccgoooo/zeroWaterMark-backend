@@ -245,6 +245,8 @@ def extraction(file_path):
         for keyword, weight in keywords
     ]
     formatted_string = ' '.join(formatted_elements)
+    if len(formatted_string) > 99:
+        formatted_string = formatted_string[:99]
 
     return formatted_string
 

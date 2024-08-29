@@ -91,10 +91,7 @@ def gen_new_wm():  # 先从前端获取数据（文件），进行生成操作�
 
             # 处理接收到的数据，可以在这里添加进一步的处理逻辑
             for file_p, file in zip(filepath, file_list):
-                # 截断到45个字符
                 feature = watermark.extraction(file_p)
-                if len(feature) > 45:
-                    feature = feature[:45] + "..."
                 result = watermark.watermark(file_p, gentime, role, userId, userName, userIP, channel)
                 print(result)
 
@@ -205,8 +202,6 @@ def rec_new_wm():  # 从前端获取数据，进行相关操作，从数据库�
                 dict2["mark"] = watermark.watermark(file_p, gentime, dict2['role'],dict2['user_id'], dict2['user_name'], dict2['user_ip'], dict2['channel'])
                 dict2["filename"] = file.filename
 
-                if len(feature) > 45:
-                    feature = feature[:45] + "..."
                 search_value = feature
                 search_sql = "SELECT mark,role,user_id,user_name,user_ip,channel FROM information WHERE feature LIKE %s"
                 cur.execute(search_sql, (search_value,))
